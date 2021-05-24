@@ -1,0 +1,40 @@
+.halp-section{
+
+}
+
+.halp{
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    align-items: center;
+    grid-gap: 4rem;
+
+    &__content{
+        @media only screen and (max-width:$bp-medium){
+            grid-column: 1 / -1;
+            width: 70%;
+            // margin: 0 auto;
+        }
+        @media only screen and (max-width:$bp-small){
+            width: 95%;
+        }
+    }
+
+    &__img{
+        width: 50rem;
+        height: 35rem;
+        transform: translateX(8rem);
+
+        @media only screen and (max-width:$bp-medium){
+            grid-column: 1 / -1;
+            width: 80%;
+            height: 100%;
+            
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

@@ -1,0 +1,228 @@
+.header{
+    height: 100vh;
+    background-image: linear-gradient(rgba($color-primary, .9),rgba($color-primary-light, .9)),url(../img/header-bg.png);  
+    clip-path: polygon(0 0,100% 0,100% 80vh,0 100%);
+    position: relative;
+
+    @media only screen and (max-width:$bp-medium){
+        clip-path: polygon(0 0,100% 0,100% 90vh,0 100%);
+    }
+
+    @media only screen and (max-width:$bp-small){
+        clip-path: polygon(0 0,100% 0,100% 95vh,0 100%);
+        // height: 70vh;
+    }
+
+    &__content{
+        max-width: 110rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+        @media only screen and (max-width:$bp-largest){
+            padding: 0 5rem;
+        }
+
+        @media only screen and (max-width:$bp-medium){
+            flex-direction: column;
+        }
+
+        @media only screen and (max-width:$bp-small){
+            top: 45%;
+        }
+    }
+
+    .hero-text-box{
+        @media only screen and (max-width:$bp-medium){
+            width: 80%;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+
+    &__text{
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: #fff;
+    }
+
+    &__right{
+        transform: translateX(8rem);
+        @media only screen and (max-width:$bp-medium){
+            margin-top: 25rem;
+        }
+
+        @media only screen and (max-width:$bp-medium){
+            margin-top: 50rem;
+            transform: translateX(0);
+        }
+    }
+
+    &__img{
+
+        img{
+            object-fit: cover;
+            height: 36rem;
+            width: 42rem;
+        }
+    }
+}
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 2rem;
+
+    @media only screen and (max-width:$bp-medium){
+        justify-content: space-between;
+        padding: 2rem 5rem;
+    }
+
+    &__logo-box{
+        width: 24rem;
+    }
+
+    &__logo{
+        width: 100%;
+        
+        @media only screen and (max-width:$bp-small){
+            width: 70%;
+            padding-top: 2rem;
+        }
+        img{
+            width: 100%;
+        }
+    }
+
+    &__list{
+        
+        @media only screen and (max-width:$bp-medium){
+            display: none;
+        }
+    }
+
+    &__item{
+
+        
+    }
+
+    &__link:link,
+    &__link:visited{
+        display: inline-block;
+        color: #Fff;
+        text-transform: capitalize;
+        font-size: 1.5rem;
+        font-weight: 500;
+        transition: all .3s;
+
+        &:not(:last-child){
+            margin-right: 1.5rem;
+            
+        }
+
+        &:hover,
+        &:active{
+            color: $color-btn;
+        }
+    }
+
+    &__submit{
+        @media only screen and (max-width:$bp-medium){
+            display: none;
+        }
+    }
+}
+
+.responsive-manu{
+    display: none;
+    // z-index: 100;
+
+    @media only screen and (max-width:$bp-medium){
+        display: block;
+    }
+
+    input{
+        display: none;
+    }
+
+    input:checked ~ &__list{
+        transform: translateX(0);
+    }
+
+    &__icon{
+        font-size: 3.2rem;
+        color: #fff;
+        position: absolute;
+        top: 3.5rem;
+        right: 3rem;
+        z-index: 102;
+        cursor: pointer;
+    }
+
+    &__list{
+        background-color: $color-btn;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 100;
+        height: 100%;
+        width: 40%;
+        transform: translateX(100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20%;
+        transition: .5s cubic-bezier(.69,.16,.2,1);
+
+        @media only screen and (max-width:$bp-small-medium){
+            width: 60%;
+        }
+
+        @media only screen and (max-width:$bp-small){
+            width: 100%;
+            padding-top: 35%;
+        }
+    }
+
+    &__item{
+
+        
+    }
+
+    &__link:link,
+    &__link:visited{
+        display: block;
+        font-size: 2.5rem;
+        text-transform: capitalize;
+        color: #fff;
+        text-align: center;
+        // background-color: #072753;
+        background-image: linear-gradient(120deg,#072753 50%, transparent 50%);
+        background-size: 220%;
+        background-position: 100%;
+        padding: 1rem 2.5rem;
+        transition: all .5s;
+
+        @media only screen and (max-width:$bp-small){
+            font-size: 3.2rem;
+        }
+
+        &:not(:last-child){
+            margin-bottom: 1rem;
+        }
+
+        &:hover,
+        &:active{
+            background-position: 0;
+        }
+    }
+}

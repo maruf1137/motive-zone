@@ -1,0 +1,58 @@
+$color-btn:#FF9C00;
+$color-primary-light:#3D7BAE;
+$color-primary:#1C4A8B;
+
+$bp-largest:75em;  //1200px
+$bp-medium:56.25em;  //900px
+$bp-small-medium:43.75em;  //700px
+$bp-small:31.25em;  //500px
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+
+    @media only screen and (max-width:$bp-largest){
+        font-size: 56%;
+    }
+
+    @media only screen and (max-width:$bp-medium){
+        font-size: 53%;
+    }
+
+    @media only screen and (max-width:$bp-small){
+        font-size: 45%; 
+    }
+}
+
+body{
+    font-size: 1.6rem;
+    color: #000;
+    font-weight: 400;
+    line-height: 1.6; 
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+.row{
+    max-width: 114rem;
+    margin: 0 auto;
+
+    
+}
+
+section{
+    padding: 8rem 0; 
+    @media only screen and (max-width:$bp-largest){
+        padding: 8rem 5rem;
+    }
+}

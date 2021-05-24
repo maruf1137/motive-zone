@@ -1,0 +1,223 @@
+.footer-section{
+    padding: 8rem 0 0 0;
+    background-color: #072753;
+
+    @media only screen and (max-width:$bp-largest){
+        padding: 8rem 5rem 0 5rem;
+    }
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: 1fr repeat(3, max-content);
+    grid-gap: 12rem;
+
+    @media only screen and (max-width:$bp-small-medium){
+        grid-gap: 6rem;
+    }
+
+    @media only screen and (max-width:$bp-small){
+        grid-gap: 6rem 2rem;
+    }
+
+    &__first{
+        @media only screen and (max-width:$bp-largest){
+            grid-column: 1 / 3; 
+        }
+        @media only screen and (max-width:$bp-small-medium){
+            grid-column: 1 / 4; 
+        }
+    }
+
+    &__second{
+        justify-self: center;
+        @media only screen and (max-width:$bp-medium){
+            grid-column: 3 / -1; 
+        }
+        @media only screen and (max-width:$bp-small-medium){
+            grid-column: 1 / 2; 
+            
+        }
+
+        @media only screen and (max-width:$bp-small){
+            justify-self: start;
+        }
+    }
+
+    &__third{
+        justify-self: center;
+
+        @media only screen and (max-width:$bp-small){
+            justify-self: start;
+        }
+    }
+
+    &__forth{
+        justify-self: center;
+        @media only screen and (max-width:$bp-small){
+            grid-column: 1 / -1; 
+            justify-self: start;
+        }
+    }
+}
+
+.first{
+    @media only screen and (max-width:$bp-small){
+        width: 80%;
+    }
+    
+    &__logo-box{
+        display: flex;
+        align-items: center;
+        margin-bottom: .5rem;
+    }
+
+    &__logo{
+        margin-right: 1rem;
+    }
+
+    &__logo-name{
+        font-size: 3.2rem;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    .p-text{
+        color: #fff;
+    }
+
+    &__form{
+        width: 100%;
+        @media only screen and (max-width:$bp-small){
+            width: 80%;
+        }
+    }
+
+    &__label{
+        color: #fff;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        display: block;
+    }
+
+    &__submit{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 85% 1fr;
+        
+    }
+
+    &__input{
+        padding: 1.5rem 1rem;
+        border: none;
+        outline: none;
+        border-radius: 3px 0 0 3px;
+    }
+
+    &__btn{
+        background-color: #1B498A;
+        border: none;
+        outline: none;
+        font-weight: 600;
+        color: #fff;
+        padding: 1.5rem;
+        cursor: pointer;
+        border-radius: 0 3px 3px 0;
+    }
+}
+
+.second{
+
+    .heading-3{
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    &__list{
+
+    }
+
+    &__item{
+        
+    }
+
+    &__link:link,
+    &__link:visited{
+        display: block;
+        color: #fff;
+        text-transform: capitalize;
+
+        &:not(:last-child){
+            margin-bottom: .7rem;
+        }
+    }
+}
+
+
+.footer-bottom{
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    justify-items: center;
+    align-items: center;
+    margin-top: 8rem;
+    border-top: 1px solid #999;
+    padding: 3rem;
+
+    @media only screen and (max-width:$bp-medium){
+        grid-template-columns: 1fr;
+        grid-row-gap: 4rem;
+    }
+
+    &__list{
+        
+    }
+
+    &__link{
+        color: #fff;
+        &:not(:last-child){
+            margin-right: 1rem;
+        }
+    }
+
+    &__social{
+        display: flex;
+    }
+
+    &__social-link{
+        color: #fff;
+        height: 4rem;
+        width: 4rem;
+        display: inline-block;
+        // background-color: red;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:not(:last-child){
+            margin-right: 1rem;
+        }
+
+        
+    }
+
+    .facebook{
+        background-color: #3A5897;
+    }
+
+    .twetter{
+        background-color: #1DA0F1;
+    }
+
+    .youtube{
+        background-color: #C4302B;
+    }
+
+    &__copyright{
+        // border: 1px solid red;
+        .p-text{
+            color: #fff;
+        }
+    }
+}
